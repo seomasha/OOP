@@ -1,3 +1,5 @@
+package OOP.Week1LABS;
+
 public class Exercise3 {
     public static void main(String[] args) {
         int seconds = 365 * 86400;

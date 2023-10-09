@@ -1,3 +1,5 @@
+package OOP.Week1LABS;
+
 import java.util.Scanner;
 
 public class Exercise6 {
