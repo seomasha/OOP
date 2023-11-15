@@ -25,7 +25,7 @@ public class EvenAndOdd {
         return sumEven + sumOdd;
     }
 
-    public static <T> List<T> reverseList(List<T> inputlist) {
+    public static <T, D, M, N, SS> List<T> reverseList(List<T> inputlist, SS smth) {
         List<T> newlist = new ArrayList<>();
 
         Collections.reverse(newlist);
