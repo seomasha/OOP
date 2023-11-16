@@ -1,70 +1,78 @@
 package OOP.WEEK7LABS;
 
-abstract class Quiz2 {
-    private int atribut1;
-    private String atribut2;
+//Create one abstract class which has two attributes with constructors getters and setters and one method. Create two
+//classes which have a constructor and the method from the abstract class and third class which is a generic class
+//extending that abstract class and create constructors getters and setters
 
-    public Quiz2(int atribut1, String atribut2) {
-        this.atribut1 = atribut1;
-        this.atribut2 = atribut2;
+abstract class Klasa {
+    private int at1;
+    private String at2;
+
+    public Klasa(int a, String b) {
+        this.at1 = a;
+        this.at2 = b;
     }
 
-    public int getAtribut1() {
-        return atribut1;
+    public int getAt1() {
+        return this.at1;
     }
 
-    public void setAtribut1(int atribut1) {
-        this.atribut1 = atribut1;
+    public void setAt1(int a) {
+        this.at1 = a;
     }
 
-    public String getAtribut2() {
-        return atribut2;
+    public String getAt2() {
+        return this.at2;
     }
 
-    public void setAtribut2(String atribut2) {
-        this.atribut2 = atribut2;
+    public void setAt2(String a) {
+        this.at2 = a;
     }
 
+    abstract String test();
+}
+
+class Quiz1 extends Klasa{
+    public Quiz1(int a, String b) {
+        super(a, b);
+    }
+
+    @Override
     public String test() {
         return "Test";
     }
 }
-class Klasa1 extends Quiz2 {
-    public Klasa1(int atribut1, String atribut2) {
-        super(atribut1, atribut2);
+
+class Quiz2 extends Klasa{
+    public Quiz2(int a, String b) {
+        super(a, b);
     }
 
     @Override
     public String test() {
-        return "kec";
+        return "Test";
     }
 }
 
-class Klasa2 extends Quiz2 {
-    public Klasa2(int atribut1, String atribut2) {
-        super(atribut1, atribut2);
+class Quiz3 <T> extends Klasa{
+    private T type;
+
+    public Quiz3(int a, String b, T t) {
+        super(a, b);
+        this.type = t;
+    }
+
+    public T getType() {
+        return this.type;
+
+    }
+
+    public void setType(T newType) {
+        this.type = newType;
     }
 
     @Override
     public String test() {
-        return "Dva";
-    }
-}
-
-class Klasa3 <T> extends Quiz2{
-
-    private T nesto;
-
-    public Klasa3(int atribut1, String atribut2, T nesto) {
-        super(atribut1, atribut2);
-        this.nesto = nesto;
-    }
-
-    public T getNesto() {
-        return nesto;
-    }
-
-    public void setNesto(T nesto) {
-        this.nesto = nesto;
+        return "Test";
     }
 }
