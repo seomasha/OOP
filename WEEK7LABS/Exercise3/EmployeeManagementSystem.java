@@ -1,5 +1,6 @@
 package OOP.WEEK7LABS.Exercise3;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -12,18 +13,10 @@ public class EmployeeManagementSystem {
     }
 
     public double totalSalary() {
-        double sum = 0;
-
-        for(Employee e : employees) {
-            sum += e.salary();
-        }
-
-        return sum;
+        return employees.stream().mapToDouble(Employee::salary).sum();
     }
 
     public void displayEmployeeDetails() {
-        for(Employee e : employees) {
-            System.out.println(e);
-        }
+        employees.stream().forEach(employee -> System.out.println(employee));
     }
 }
