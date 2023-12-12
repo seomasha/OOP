@@ -13,7 +13,7 @@ public class Event {
         int event = new Random().nextInt(0, events.length);
         int UserID = new Random().nextInt(0, 999);
 
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName, true));
         bufferedWriter.write(UserID + "| " + events[event] + " | " + timestamp);
         bufferedWriter.newLine();
         bufferedWriter.close();
