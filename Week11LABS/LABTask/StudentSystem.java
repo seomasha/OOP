@@ -36,11 +36,11 @@ public class StudentSystem {
             String[] tempArr = line.split(",");
 
             Student student = new Student(
-                    tempArr[0] == "" ? 000 : Integer.parseInt(tempArr[0]),
+                    Integer.parseInt(tempArr[0]),
                     tempArr[1],
                     tempArr[2],
                     tempArr[3],
-                    tempArr[0] == "" ? 000 : Integer.parseInt(tempArr[0])
+                    Double.parseDouble(tempArr[4])
             );
 
             students1.add(student);
